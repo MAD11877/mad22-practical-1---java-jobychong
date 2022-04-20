@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main
+public class Question2
 {
   public static void main(String[] args)
   {
@@ -12,7 +12,8 @@ public class Main
     System.out.print("Please enter your height in m: ");
     double height = in.nextDouble();
 
-    System.out.println("Your height is "+ height + "m");
-    System.out.println("Your weight is "+ weight + "kg");
+    double bmi = weight/(height*height);
+
+    System.out.println("Your BMI is "+ bmi);
   }
-}
+}}
