@@ -1,42 +1,43 @@
+import java.io.*;
 import java.util.Scanner;
-import java.util.*;
 
 public class Question5
 {
-  public static void main(String[] args)
-  {
-    System.out.print("Enter your input: ");
+
+  public static void main(String[] args) {
+
     Scanner in = new Scanner(System.in);
-    int input = in.nextInt();
-
-    List<Integer> list=new ArrayList<Integer>(); 
-
-    for(int x = 1; x <= input; x++)
-      {
-        System.out.print("Enter number "+ x + ": ");
-        int numbers = in.nextInt();
-        list.add(numbers);
-      }
-
-    System.out.print(list);
-     int maxVal=0, count=0, maxCount=0;
-
-        for(int i=0;i<input;i++)
-        {
-            count = 0;
-            for(int j=0;j<input;j++)
-            {
-                if(list[i] == list[j])
-                {
-                    count++;
-                }
-            }
-            if (count > maxCount) {
-                        maxCount = count;
-                        maxVal = list[i];
-                   }
+    //System.out.println("Enter the size of array : ");
+    int number_of = in.nextInt();
+    
+    int arr[] = new int[number_of];
+    
+    //System.out.println("Enter the elements of array : ");
+    for(int i=0;i<number_of;i++) {
+      arr[i] = in.nextInt();
+    }
+    
+    //System.out.println("Entered elements are : ");
+    for(int i=0;i<number_of;i++) {
+      //System.out.print(arr[i]+" ");
+    }
+    
+    int maxVal=0, count=0, maxCount=0;
+    
+    for(int i=0;i<number_of;i++) {
+      count = 0;
+      for(int j=0;j<number_of;j++) {
+        if(arr[i] == arr[j]) {
+          count++;
         }
-
-        System.out.println("\nThe mode is "+maxVal+" as there are "+maxCount + " of the number " + maxVal );
+      }
+      if (count > maxCount) {
+                      maxCount = count;
+                      maxVal = arr[i];
+                 }
+    }
+    
+    //System.out.println("\nThe mode is "+maxVal+" as there are "+maxCount + " of the number " + maxVal );
+    System.out.println(maxVal);
   }
 }
