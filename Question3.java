@@ -9,12 +9,12 @@ public class Question3
      * 
      * Hint: in.nextInt() to read integer
      */
-    System.out.print("Enter your integer: ");
+    //System.out.print("Enter your integer: ");
     Scanner in = new Scanner(System.in);
     int selected_number = in.nextInt();
 
     int answer = selected_number*selected_number;
 
-    System.out.println("Your answer is: "+answer);
+    System.out.println(answer);
   }
 }
